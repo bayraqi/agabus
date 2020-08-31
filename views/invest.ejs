@@ -1,0 +1,107 @@
+<%- include ('partials/fast.ejs'); -%>
+
+<div class="invest-container">
+    <div class="investment-details">
+        <div class="investment-details-header">
+            <div class="header-title">
+                <h2>Investment Summary</h2>
+            </div>
+            <div class="header-content">
+                <p>Thank you for making an investment on this project.</p>
+                <p>Here is a summary of your commitment.</p>
+            </div>
+        </div>
+        <div class="investment-details-summary">
+            <% if (project) { %>
+                <div class="summary--row">
+                    <div class="">
+                        <p>Project</p>
+                    </div>
+                    <div class="summary--section">
+                        <p>Crop: <%=project.crop %></p>
+                        <p>Variant: <%=project.crop %></p>
+                        <p>Location: <%=project.crop %></p>
+                    </div>
+                </div>
+                <div class="summary--row">
+                    <div class="">
+                        <p>Finance</p>
+                    </div>
+                    <div class="summary--section">
+                        <p>Return: <%=project.crop %></p>
+                        <p>Funding: <%=project.crop %></p>
+                        <p>Raised: <%=project.crop %></p>
+                    </div>
+                </div>
+                <div class="summary--row">
+                    <div class="">
+                        <p>Duration</p>
+                    </div>
+                    <div class="summary--section">
+                        <p>Return: <%=project.crop %></p>
+                        <p>Funding: <%=project.crop %></p>
+                        <p>Raised: <%=project.crop %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        
+        <form action="/" method="POST" class="form-group">
+            <div class="form-group-units--calculation">
+                <div class="">
+                    <label for="">Amount</label>
+                    <p name="cost">$6 000</p>
+                </div>
+                <div class="">
+                    <label for="">Units</label>
+                    <div class="qty">
+                        <button type="button" class="minus" onClick="decreaseValue()">-</button>
+                        <input type="number" class="number" id="number" min="0" max="10" name="units" value="0" >
+                        <button type="button" class="minus" onClick="increaseValue()">+</button>
+                      </div>
+                </div>
+                <div class="">
+                    <label for="">Amount</label>
+                    <p>$23900</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input class="invest-form" type="text" name="name" id="">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="invest-form" type="email" name="email" id="">
+            </div>
+            <div class="terms">
+                <p>You consent and agree to the Terms of Service and Terms of Conditions.</p>
+            </div>
+            <div class="">
+                <input class="invest-form" type="submit" value="Invest" >
+            </div>
+        </form>
+        
+        
+    </div>
+    <div class="">
+        investment details
+        + other available projects
+    </div>
+</div>
+
+<script>
+        function increaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+        }
+
+        function decreaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number').value = value;
+        }
+</script>

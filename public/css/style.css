@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+.container{
+    padding: 0px 5%;
+}
+
+
+/***************/
+
+.project-listing{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a.project-listing {
+    text-decoration: none;
+    padding: 0;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+a.project-listing:hover{
+    background-color: #F4F4F4;
+}
+
+.projects-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+}
+
+.project-listing-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3%;
+    padding: 20px 0px 10px;
+    font-weight: 600;
+    color: #000;
+}
+
+.project-listing-description{
+    padding: 10px 0%;
+    font-size: 0.9em;
+    color: #000;
+    opacity: .8;
+}
+
+.project-listing-image{
+   width: 100%;
+   height: auto;
+} 
+
+img{
+    object-fit: cover;
+    background-size: contain;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.project-listing-title{
+    font-weight: 800;
+    font-size: 1.2em;
+    padding: 10px 0% 0px;
+    color: #000;
+}
+
+span {
+    font-weight: 500;
+    font-size: .75em;
+    opacity: .5;
+    color: #000;
+}
+
+.title{
+    padding: 20px 0% 10px;
+}
+
+
+/************/
+header{
+    height: 60px;
+    line-height: 4;    
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5%;
+}
+
+header nav{
+    width: 30%;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    padding: 5px 0%;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+/********************/
+.project-view{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-gap: 5%;
+}
+
+.project-view-wrapper{
+    padding-top: 20px;
+}
+
+.project-view-title{
+    padding-bottom: 20px;
+}
+
+.project-view-subtitle{
+   display: flex;
+   justify-content: space-evenly;
+   margin: 5px 0%;
+   font-size: .75em;
+   opacity: .75;
+}
+
+.project-view-description{
+    font-size: .85em;
+    opacity: .9;
+    padding: 5px 0% 20px;
+}
+
+.project-view-progress{
+    padding: 10px 0%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-invest-form{
+    padding: 10px 2%;
+    margin: 20px 0%;
+    border-radius: 10px;
+}
+
+form.invest-form{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-gap: 5%;
+}
+
+input[type="text"].invest-form,
+input[type="email"].invest-form,
+input[type="password"].invest-form {
+    height: 32px;
+    border: 2px solid #F4F4F4;
+    width: 100%;
+    border-radius: 3px;
+    padding-left: 2%;
+}
+
+input[type="submit"].invest-form{
+    height: 32px;
+    border: 0 none;
+    width: 100%;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-invest-form--header{
+    padding: 15px 0% 10px;
+}
+
+
+/********************************/
+.invest-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+}
+
+.investment-details{
+    padding: 10px 0%;
+}
+
+.investment-details-summary{
+    font-size: .8em;
+    width: 60%;
+    padding: 10px 1%;
+    background-color: burlywood;
+    border-radius: 5px;
+}
+
+.investment-details-header{
+    padding: 10px 0%;
+}
+
+.header-title{
+    margin-bottom: 10px;
+}
+
+.header-content{
+    font-size: .8em;
+}
+
+.form-group{
+    display: grid;
+    width: 100%;
+    margin: 10px 0%;
+}
+
+.form-group label{
+    font-size: .8em;
+    padding-bottom: 5px;
+}
+
+form.form-group{
+    width: 60%;
+}
+
+form .terms{
+    font-size: .8em;
+    padding: 10px 0% 20px;
+}
+
+
+/********************************/
+.summary--section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary--row{
+    padding: 5px 0%;
+}
+
+.form-group-units--calculation{
+    display: grid;
+    grid-template-columns: 25% 40% 25%;
+    grid-gap: 5%;
+}
+
+button.minus{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+input[type="number"]{
+    height: 32px;
+    border: 0;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

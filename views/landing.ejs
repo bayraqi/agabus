@@ -1,0 +1,42 @@
+<%- include ('partials/header.ejs'); -%>
+
+<h1>Welcome home</h1>
+
+<div class="projects">
+    <div class="title">
+        <p>Browse through our latest projects</p>
+    </div>
+    <div class="projects-wrapper">
+        <% projects.forEach((project) => { %>
+            <a class="project-listing" href="/projects/v/<%= project._id %>">
+                <div class="project-listing">
+                    <div class="project-listing-image">
+                    <img src="./img/turnips.jpeg" alt="">
+                    </div>
+                    <div class="project-listing-title">
+                        <p><%= project.crop %></p>
+                        <p><%= project.location %></p>
+                    </div>
+                    <div class="project-listing-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis similique doloremque necessitatibus eveniet, blanditiis eaque dignissimos error nihil.</p>
+                    </div>
+                    <div class="project-listing-details">
+                        <div class="">
+                            <span>DURATION</span>
+                            <p><%= project.duration %></p>
+                        </div>
+                        <div class="">
+                            <span>AMOUNT</span>
+                            <p>$<%= project.amount %></p>
+                        </div>
+                        <div class="">
+                            <span>RETURN</span>
+                            <p><%= project.return %></p>
+                        </div>
+                    </div>
+                </div>
+               </a> 
+        <% }) %>
+    </div>
+</div>
+

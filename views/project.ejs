@@ -1,0 +1,39 @@
+<%- include ('partials/fast.ejs'); -%>
+
+
+
+
+
+<div class="project-view-wrapper">
+    <div class="project-view">
+        <div class="project-view-image">
+            <img src="../../img/turnips.jpeg" alt="">
+        </div>
+        <div class="project-view-details">
+            <% if (project) { %>
+                <div class="project-view-title">
+                    <h2><%= project.crop %></h2>
+                </div>
+                <div class="project-view-subtitle">
+                    <p><%= project.location %></p>
+                    <p><%= project._id %></p>
+                </div>
+                <div class="project-view-description">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur quia mollitia animi praesentium a earum nostrum, quidem fuga?</p>
+                </div>
+                <div class="project-view-progress">
+                    <p><%= project.duration %></p>
+                    <p><%= project.amount %></p>
+                    <p><%= project.return %></p>
+                </div>
+
+                <div class="project-invest-form">
+                    <a href="/invest/v/<%=project._id %>">Invest in project</a>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</div>
+
+
+
